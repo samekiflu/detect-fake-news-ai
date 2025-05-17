@@ -6,9 +6,6 @@ class FakeNewsDetector:
     """
     A class for detecting fake news using transformer models.
     
-    In a real application, this would use specific models fine-tuned for fake news detection.
-    For this example, we'll define the structure but not implement the actual model loading
-    to keep things simpler.
     """
     
     def __init__(self, model_name="facebook/bart-large-mnli"):
@@ -64,8 +61,7 @@ class FakeNewsDetector:
         """
         Extract article content from a URL.
         
-        In a real implementation, this would use newspaper3k or similar
-        to scrape and extract the article content.
+        
         
         Args:
             url: The URL to extract content from
