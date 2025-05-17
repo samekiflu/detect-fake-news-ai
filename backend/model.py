@@ -18,11 +18,7 @@ class FakeNewsDetector:
         Args:
             model_name: Name of the pre-trained model to use
         """
-        # In a real implementation, we would load the model and tokenizer here
-        # self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        # self.model = AutoModelForSequenceClassification.from_pretrained(model_name)
-        
-        # For demonstration purposes, we'll just set up placeholders
+
         self.model_name = model_name
         print(f"Initialized FakeNewsDetector with model: {model_name}")
         
@@ -36,12 +32,7 @@ class FakeNewsDetector:
         Returns:
             A dictionary containing analysis results
         """
-        # In a real implementation, this would process the text through the model
-        # inputs = self.tokenizer(text, return_tensors="pt", truncation=True, max_length=512)
-        # outputs = self.model(**inputs)
-        # predictions = torch.nn.functional.softmax(outputs.logits, dim=1)
-        
-        # For demonstration, we'll return mock results
+      
         print(f"Analyzing text: {text[:100]}...")
         
         # Simple keyword-based scoring for demonstration
@@ -82,19 +73,7 @@ class FakeNewsDetector:
         Returns:
             A dictionary containing the article's text, title, etc.
         """
-        # This would use newspaper3k in a real implementation
-        # from newspaper import Article
-        # article = Article(url)
-        # article.download()
-        # article.parse()
-        # return {
-        #     "text": article.text,
-        #     "title": article.title,
-        #     "authors": article.authors,
-        #     "publish_date": article.publish_date,
-        #     "top_image": article.top_image,
-        #     "url": url
-        # }
+       
         
         print(f"Extracting article from URL: {url}")
         return {
