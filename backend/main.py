@@ -8,10 +8,6 @@ import datetime
 import uuid
 from fastapi.responses import JSONResponse
 
-# In a real application, we would import and initialize ML models
-# from transformers import pipeline, AutoModelForSequenceClassification, AutoTokenizer
-# from newspaper import Article
-
 app = FastAPI(title="Fake News Detector API")
 
 # Configure CORS
@@ -153,12 +149,9 @@ def generate_mock_analysis(content: str, content_type: str) -> AnalysisResponse:
 async def analyze_content(request: AnalysisRequest):
     """Analyze content for credibility and fake news detection."""
     try:
-        # In a real application, this is where we would:
-        # 1. If URL, use newspaper3k to extract article text
-        # 2. Use the Hugging Face model to analyze the text
-        # 3. Process results and return structured response
+      
         
-        # For demo, we'll use mock data
+    
         analysis = generate_mock_analysis(request.content, request.type)
         return analysis
     except Exception as e:
